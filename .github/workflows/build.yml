@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Run build/test commands
         run: |
+          useradd build
+          su build 
           makepkg -s
           PKGN=$(grep -Po "^pkgname=['\"]?\K[^'\"]+" PKGBUILD)
           echo "PKG=${PKGN}" >> $GITHUB_ENV
