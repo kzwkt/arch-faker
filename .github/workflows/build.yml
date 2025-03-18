@@ -22,6 +22,8 @@ jobs:
           PKGN=$(grep -Po "^pkgname=['\"]?\K[^'\"]+" PKGBUILD)
           echo "PKG=${PKGN}" >> $GITHUB_ENV
           FILE1=$(realpath $PKGN-99.1-1-any.pkg.tar.zst)
+          echo "FILE1=${FILE1}" >> $GITHUB_ENV
+          
 
       - name: Create GitHub Release and Upload ZIP
         uses: softprops/action-gh-release@v2
