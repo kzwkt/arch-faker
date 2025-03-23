@@ -9,7 +9,7 @@ depends=(
   'shadow'
   'licenses' 'pacman' 'archlinux-keyring' 'systemd' 'systemd-sysvcompat'
 )
-provides=(base)
+provides=(base coreutils bash gawk gettext)
 
 post_install() {
   # Install symlinks using busybox
