@@ -16,12 +16,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          pacman -Sy --noconfirm base-devel
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Run build/test commands
-        run: |
+          pacman -Sy --noconfirm base-devel busybox 
           useradd build
           chown -R build .
           su build -c 'makepkg -s'
