@@ -1,7 +1,7 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/pkgname/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=base-busybox
-pkgver=1
+pkgver=99
 pkgrel=1
 arch=('any')
 depends=(
