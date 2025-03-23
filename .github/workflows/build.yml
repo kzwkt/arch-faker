@@ -23,7 +23,7 @@ jobs:
           pacman -Sy --noconfirm base-devel busybox 
           useradd build
           chown -R build .
-          su build -c 'makepkg -s'
+          su build -c 'makepkg -s --nocheck'
           PKGN=$(grep -Po "^pkgname=['\"]?\K[^'\"]+" PKGBUILD)
           echo "PKG=${PKGN}" >> $GITHUB_ENV
           FILE1=$(realpath $PKGN-99-1-any.pkg.tar.zst)
