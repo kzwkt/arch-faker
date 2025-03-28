@@ -24,6 +24,8 @@ jobs:
           useradd build
           chown -R build .
           su build -c 'makepkg -s'
+          PKGN=$(grep -Po "^pkgname=['\"]?\K[^'\"]+" PKGBUILD)
+          echo "PKG=${PKGN}" >> $GITHUB_ENV
           echo "FILE1=$(realpath *.tar.zst)" >> $GITHUB_ENV
 
           
