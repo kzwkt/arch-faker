@@ -4,5 +4,6 @@ pkgname=phonon-qt6-vlc
 pkgver=99
 pkgrel=1
 arch=('any')
+provides=('phonon-qt6-backend' 'phonon-qt6')
 
 
